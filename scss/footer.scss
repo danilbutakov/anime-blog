@@ -1,0 +1,148 @@
+@import "style.scss";
+
+.footer {
+    background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+    &__container {
+
+    }
+
+    &__up {
+        margin: 50px 0 84px 0;
+    }
+
+    .footer {
+        
+		&__container {
+        
+		}
+
+		&__up {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 80px 60px 80px;
+            @media (max-width: $md3) {
+            margin: 30px 15px 30px 15px;
+        }
+		}
+
+		&__inf {
+		}
+
+		&__down {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 38 / 16 * 100%;
+            letter-spacing: 0.677419px;
+            color: #FFFFFF;
+            padding: 21px 0;
+            border-top: 1px solid #FFFFFF;
+            margin: 0 84px 0 84px;
+            @media (max-width: $md3) {
+                margin: 0 15px 0 15px;
+            }
+		}
+}
+
+.inf {
+
+		&__par {
+            margin: 25px 0 0 0;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 38 / 16 * 100%;
+            letter-spacing: 0.677419px;
+            color: #FFFFFF;    
+            @media (max-width: $md3) {
+                font-size: 12px;
+                line-height: 24 / 12 * 100%;
+                letter-spacing: 0px;
+                padding: 0 25px 0 0;
+            }     
+		}
+        &__images {
+            img {
+                transition: all 0.5s ease 0s;
+                @media (min-width: $md2) {
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+}
+.content {
+    
+		&__form {
+            
+            
+		}
+}
+.form {
+
+		&__body {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: #FAFAFA;
+            opacity: 0.8;
+            width: 405px;
+            height: 45px;
+            text-align: center;
+            @media (max-width: $md3) {
+                width: 100%;
+                height: 100%;
+                margin: 0 0 30px 0;
+                flex-direction: column;
+            }
+		}
+
+		&__button {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 9px;
+            letter-spacing: 1px;
+            color: #FAFAFA;
+            background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+            line-height: 9px;
+            display: inline-flex;
+            align-items: center;
+            height: 25px;
+            justify-content: center;
+            text-align: center;
+            margin: 0 25px 0 10px;
+            padding: 0 20px;
+            @media (min-width: $md2) {
+                transition: background 0.3s ease 0s;
+                &:hover {
+                    background: linear-gradient(95.32deg, #707070 0%, #353535 101.64%);
+                }
+            }
+            @media (max-width: $md3) {
+                height: 20%;
+                border-radius: 15px;
+                width: 72%;
+                font-size: 10px;
+                margin: 30px 0 0 0;
+                
+            }   
+		}
+
+		&__item {
+		}
+
+		&__input {
+            background: #FAFAFA;
+            opacity: 0.8;
+            @media (max-width: $md3) {
+                margin: 50% 0;
+                height: 50%;
+            }
+		}
+
+		&__btn {
+		}
+}
+}

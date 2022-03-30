@@ -21,13 +21,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1272px;
-$maxWidthContainerHeader: 1440px;
+$maxWidthContainerWelcome: 1440px;
 $md1: $maxWidthContainer + 12px;
 $md2: 991.98px;
 $md3: 767.98px;
 $md4: 479.98px;
-$md5: 1024.98px;
+$md5: 1023.98px;
 $md6: 1431.98px;
+$md7: 983.98px;
 .wrapper {
     width: 100%;
     min-height: 100%;
@@ -40,8 +41,8 @@ $md6: 1431.98px;
     max-width: $maxWidthContainer;  
     margin: 0 auto;  
 }
-._container-header {
-    max-width: $maxWidthContainerHeader;  
+._container-welcome {
+    max-width: $maxWidthContainerWelcome;  
     margin: 0 auto; 
 }
 

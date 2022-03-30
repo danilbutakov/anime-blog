@@ -1,0 +1,147 @@
+@import "style.scss";
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    margin: 0 0 20px 0;
+    background-color:rgba(255, 255, 255, 1);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media (max-width: $md3) {
+            background-color: rgb(185, 185, 185);
+        z-index: 2;
+        }
+    }
+
+    &__body {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        align-items: center;
+        margin: 0 20px;
+        @media (max-width: $md3) {
+            height: 50px;
+        }
+    }
+
+    &__logo {
+        flex: 0 0 60px;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__burger {
+        display: none;
+        @media (max-width: $md3) {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
+            &::before, &::after {
+                content: '';
+                background-color: black;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+            &.active {
+                
+                &::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                    transition: all 0.3s ease 0s;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                    transition: all 0.3s ease 0s;
+                }
+                span {
+                    transform: scale(0);
+                }
+            }
+            span {
+                position: absolute;
+                background-color: black;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;
+            }
+        }
+    }
+
+    &__menu {
+        @media (max-width: $md3) {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 70px 20px 0 20px;
+            transition: all 0.5s ease 0s;
+            background-color: rgba(255, 255, 255, 1);
+        }
+        &.active {
+            top: 0%;
+            transition: all 0.5s ease 0s;
+        }
+    }
+
+    &__list {
+        display: flex;
+        li {
+            margin: 0 0 0 40px;
+        }
+        @media (max-width: $md3) {
+            display: block;
+            li {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    &__link {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28 / 14 * 100%;
+        letter-spacing: 0.5px;
+        color: #313131;
+    }
+}
+
+.sign-up {
+    color: #FFFFFF;
+    padding: 4px 15px;
+    font-weight: 500;
+    background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+    border-radius: 3px;
+}
+
+.login {
+    font-weight: 500;
+}

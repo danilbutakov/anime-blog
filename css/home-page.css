@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer .footer__up {
   display: flex;
   justify-content: space-between;
-  margin: 50px 80px 60px 80px;
+  margin: 50px 15px 60px 15px;
 }
 @media (max-width: 767.98px) {
   .footer .footer__up {
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
   padding: 21px 0;
   border-top: 1px solid #FFFFFF;
-  margin: 0 84px 0 84px;
+  margin: 0 0px 0 0px;
 }
 @media (max-width: 767.98px) {
   .footer .footer__down {

@@ -47,13 +47,11 @@
                     <div class="content__info">
                         <div class="content__title">Welcome to <br> Gates</div>
                         <div class="content__text">Get the latest news on your favourite mangas, anime and <br> manhwa around the world!</div>
-                        <div class="content__form">
-                            <form action="#" id="form" class="form__body">
+                        <div class="content__form form">
+                            <form action="#" class="form__body" id="form">
                                 <button class="form__button" type="submit">SUBSCRIBE</button>
-                                <div class="form__item">
-                                    <input type="email" id="formEmail" name="email" class="form__input" placeholder="Enter your email">
-                                </div>
-                                <button class="form__btn" type="submit"><img src="img/ico/Group 4.png" alt=""></button>
+                                <input id="formEmail" type="text" name="email" class="form__input _req _email" placeholder="Enter your email">
+                                <button class="form__ico" type="submit"><img src="img/ico/Group 4.png" alt=""></button> 
                             </form>
                         </div>
                     </div>
@@ -631,10 +629,11 @@
                         <p class="inf__par">Gates is a blog that focuses on Japanese art and anime. <br> They feature information on Otaku conventions and other <br> anime topics. Hear from famous anime filmmakers and <br> artists as well as plenty of news about the art of cartoon <br> creation in the Japanese culture.</p>
                     </div>
                     <div class="content__form">
-                        <form action="#" id="form" class="form__body">
+                        <form action="#" class="form__body" id="form">
                             <button class="form__button" type="submit">SUBSCRIBE</button>
                             <div class="form__item">
-                                <input type="email" id="formEmail" name="email" class="form__input" placeholder="Enter your email">
+                                <input type="email" class="email _req" placeholder="Enter your email">
+                                <span class="error"></span>
                             </div>
                             <button class="form__btn" type="submit"><img src="img/ico/Group 4.png" alt=""></button>
                         </form>

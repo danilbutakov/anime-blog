@@ -103,29 +103,35 @@ $(document).ready(function() {
             e.preventDefault();
 
             let error = formValidate(form);
-            
             let formData = new FormData(form);
             
-            if (error === 0) {
+            console.log(error);
+            if (error===1) {
                 form.classList.add('_sending');
                 let response = await fetch('sendmail.php', {
                     method: 'POST',
                     body: formData
                 });
-                if (respons.ok) {
-                    let result = await respons.json();
+                if (response.ok) {
+                    let result = await response.json();
                     alert(result.message);
-                    form.reset(); 
+                    formPreview.innerHTML = '';
+                    form.reset();
+                    form.classList.remove('_sending');
                 } else {
                     alert('Error');
-                } 
-            } 
+                    form.classList.remove('_sending');
+                }
+            }else {
+                alert('Enter Email');
+            }
         }
         
         
         function formValidate(form) {
             let error = 0;
             let formReq = document.querySelectorAll('._req');
+            
             for (let index = 0; index < formReq.length; index++) {
                 const input = formReq[index];
                 formRemoveError(input);

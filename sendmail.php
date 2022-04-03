@@ -10,7 +10,7 @@
     $mail->setLanguage('ru', 'phpmailer/language');
     $mail->IsHtml(true);
 
-    $mail->setForm('info@fls.guru', 'Dan');
+    $mail->setFrom('mr.ambrozia@mail.ru', 'Dan');
     $mail->addAddress('ibutakov52@gmail.com');
     $mail->Subject = 'Привет! Это "Я"';
 
@@ -22,7 +22,7 @@
 
     $mail->Body = $body;
 
-    if (!mail->send()) {
+    if (!$mail->send()) {
         $message = 'Ошибка';
     } else {
         $message = 'Данные отправлены!';

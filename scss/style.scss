@@ -22,6 +22,7 @@ $minWidth: 320px;
 $maxWidth: 1920px;
 $maxWidthContainer: 1272px;
 $maxWidthContainerWelcome: 1440px;
+$maxWidthContainerSignLog: 700px;
 $md1: $maxWidthContainer + 12px;
 $md2: 991.98px;
 $md3: 767.98px;
@@ -46,6 +47,10 @@ $md7: 983.98px;
     margin: 0 auto; 
 }
 
+._container-signlog {
+    max-width: $maxWidthContainerSignLog;
+    margin: 0 auto;
+}
 ._active {
     border-bottom: solid #313131 2px;
     border-radius: 1px;

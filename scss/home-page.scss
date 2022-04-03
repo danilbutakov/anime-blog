@@ -24,6 +24,28 @@ body.lock {
 .content {
 
     &__info {
+
+        .content {
+
+            &__form {
+                
+            }
+    }
+        .form {
+    
+            &__body {
+                display: flex;
+            }
+    
+            &__button {
+            }
+    
+            &__input {
+            }
+    
+            &__ico {
+            }
+        }
     }
 
     &__title {

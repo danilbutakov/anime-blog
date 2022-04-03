@@ -22,10 +22,14 @@
             margin: 50px 15px 60px 15px;
             @media (max-width: $md3) {
             margin: 30px 15px 30px 15px;
-        }
+            flex-direction: column;
+            }
 		}
 
 		&__inf {
+            @media (max-width: $md3) {
+                margin-bottom: 50px;
+            }
 		}
 
 		&__down {
@@ -74,77 +78,56 @@
             }
         }
 }
-.content {
-    
-		&__form {
-            
-            
-		}
+
+.footer {
+
+    &__form {
+        max-height: 50px;
+        width: 400px;
+        background: #FAFAFA;
+        opacity: 0.8;
+        margin: 0 0 30px 0;
+        padding: 10px 10px;
+    }
 }
 .form {
 
-		&__body {
+    &__body {
+        
+        @media (min-width: $md3) {
             display: flex;
-            align-items: center;
-            justify-content: left;
-            background-color: #FAFAFA;
-            opacity: 0.8;
-            width: 405px;
-            height: 45px;
-            text-align: center;
+        }
+    }
+
+    &__button {
+        margin: 0 40px 0 0;
+        @media (max-width: 900px) {
+            margin: 0 20px 0 0;
+        }
+    }
+
+    &__input {
+        margin: 0 50px 0 0;
+        @media (max-width: 900px) {
+            margin: 0 15px 0 0;
+        }
+    }
+
+    &__ico {
+        background-color: #FAFAFA;
+        opacity: 0.8;
+        img {
+            
             @media (max-width: $md3) {
-                width: 100%;
-                height: 100%;
-                margin: 0 0 30px 0;
-                flex-direction: column;
+                display: none;
             }
-		}
-
-		&__button {
-            font-family: 'Poppins';
-            font-weight: 600;
-            font-size: 13px;
-            line-height: 9px;
-            letter-spacing: 1px;
-            color: #FAFAFA;
-            background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
-            line-height: 9px;
-            display: inline-flex;
-            align-items: center;
-            height: 25px;
-            justify-content: center;
-            text-align: center;
-            margin: 0 25px 0 10px;
-            padding: 0 20px;
-            @media (min-width: $md2) {
-                transition: background 0.3s ease 0s;
-                &:hover {
-                    background: linear-gradient(95.32deg, #707070 0%, #353535 101.64%);
-                }
+            @media (min-width: 768px) {
+                margin: 2.5% 0 0 0;
+                display: block;
             }
-            @media (max-width: $md3) {
-                height: 20%;
-                border-radius: 15px;
-                width: 72%;
-                font-size: 10px;
-                margin: 30px 0 0 0;
-                
-            }   
-		}
-
-		&__item {
-		}
-
-		&__input {
-            background: #FAFAFA;
-            opacity: 0.8;
-            @media (max-width: $md3) {
-                margin: 50% 0;
-                height: 50%;
-            }
-		}
-
-		&__btn {
-		}
+        }
+    }
 }
+
 }
+

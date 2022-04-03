@@ -1,0 +1,100 @@
+@import "header.scss";
+@import "footer.scss";
+
+body.lock {
+    overflow: hidden;
+}
+
+
+.page {
+    background-image: url(../img/home/bg1.png);
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding: 340px 0 350px 0;
+}
+
+.sign {
+
+    &__content {
+    }
+}
+
+.content {
+
+    &__form2 {
+        
+    }
+}
+.form2 {
+
+    &__item {
+        margin: 0 0 30px 0;
+        background: #FAFAFA;
+        opacity: 0.8;
+        padding: 20px 10px 20px 10px;
+        
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+.form {
+
+    &__label {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 9px;
+        line-height: 9px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+        padding: 10px 30px;
+        margin: 0 25px 30px 0;
+        &.password {
+            padding: 10px 20px;
+        }
+    }
+}
+.name {
+    width: 70%;
+    @media (max-width: $md3) {
+        width: 50%;
+    }
+}
+.email {
+    width: 70%;
+    @media (max-width: $md3) {
+        width: 50%;
+    }
+}
+.password {
+    width: 70%;
+    @media (max-width: $md3) {
+        width: 50%;
+    }
+}
+.button {
+
+    &__send {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: #FFFFFF;
+        background: linear-gradient(95.32deg, #313131 0%, #000000 101.64%);
+        border: 2px solid #FFFFFF;
+        border-radius: 3px;
+        padding: 5px 15px;
+        margin: 30px 0 0 0;
+    }
+}

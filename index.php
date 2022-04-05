@@ -1,3 +1,38 @@
+<?php
+
+$mysqli = new mysqli('localhost', 'dan', '', 'anime-blog');
+
+    if(mysqli_connect_errno()) {
+        printf('Соединение не установлено', mysqli_error());
+        exit();
+    }
+
+
+$mysqli->set_charset('utf8');
+
+
+
+$query = $mysqli->query('SELECT * FROM subscribe');
+
+$emailSub = mysqli_real_escape_string($mysqli, $_REQUEST['email__sub']);
+
+if($query != '') {
+    $query = "INSERT INTO subscribe VALUES(null, '$emailSub')";
+}
+
+
+
+if(mysqli_query($mysqli, $query)){
+    echo "Записи успешно добавлены.";
+} else{
+    echo "ERROR: Не удалось выполнить $query. " . mysqli_error($mysqli);
+}
+
+
+$mysqli->close();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +59,7 @@
         <header class="header">
             <div class="header__container _container">
                 <div class="header__body">
-                    <a href="" class="header__logo">
+                    <a href="index.php" class="header__logo">
                         <img src="img/header/Logo.png" alt="Logo">
                     </a>
                     <div class="header__burger">
@@ -32,10 +67,10 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a href="index.html" class="header__link _active">Home</a></li>
+                            <li><a href="index.php" class="header__link _active">Home</a></li>
                             <li><a href="" class="header__link">Connect</a></li>
-                            <li><a href="signup.html" class="header__link sign-up">Sign up</a></li>
-                            <li><a href="login.html" class="header__link login">Login</a></li>
+                            <li><a href="signup.php" class="header__link sign-up">Sign up</a></li>
+                            <li><a href="login.php" class="header__link login">Login</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,9 +83,9 @@
                         <div class="content__title">Welcome to <br> Gates</div>
                         <div class="content__text">Get the latest news on your favourite mangas, anime and <br> manhwa around the world!</div>
                         <div class="content__form form">
-                            <form action="#" class="form__body" id="form">
+                            <form action="index.php" class="form__body" method="post">
                                 <button class="form__button" type="submit">SUBSCRIBE</button>
-                                <input id="formEmail" type="text" name="email" class="form__input _req _email" placeholder="Enter your email">
+                                <input type="text" name="email__sub" class="form__input" placeholder="Enter your email">
                                 <button class="form__ico" type="submit"><img src="img/ico/Group 4.png" alt=""></button> 
                             </form>
                         </div>
@@ -629,9 +664,9 @@
                         <p class="inf__par">Gates is a blog that focuses on Japanese art and anime. <br> They feature information on Otaku conventions and other <br> anime topics. Hear from famous anime filmmakers and <br> artists as well as plenty of news about the art of cartoon <br> creation in the Japanese culture.</p>
                     </div>
                     <div class="footer__form form">
-                        <form action="#" class="form__body" id="form">
+                        <form action="index.php" method="post" class="form__body" id="form">
                             <button class="form__button" type="submit">SUBSCRIBE</button>
-                            <input id="formEmail" type="text" name="email" class="form__input _req _email" placeholder="Enter your email">
+                            <input id="formEmail" type="text" name="email__sub" class="form__input _req _email" placeholder="Enter your email">
                             <button class="form__ico" type="submit"><img src="img/ico/Group 4.png" alt=""></button> 
                         </form>
                     </div>

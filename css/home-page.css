@@ -116,22 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 .form__body {
   position: relative;
 }
-.form__body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(51, 51, 51, 0.9) url(../img/gif/Spinner-1s-200px.gif) center/50px no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease 0s;
-}
-.form__body._sending::after {
-  opacity: 1;
-  visibility: visible;
-}
 .form__button {
   font-family: 'Poppins';
   font-style: normal;
@@ -162,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 20% 0 0;
   }
 }
-.form__input._error {
+.form__input.error {
   box-shadow: 0 0 15px red;
 }
 .form__ico {
@@ -437,22 +421,6 @@ h1, h2, h3, h4, h5, h6 {
 .form__body {
   position: relative;
 }
-.form__body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(51, 51, 51, 0.9) url(../img/gif/Spinner-1s-200px.gif) center/50px no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease 0s;
-}
-.form__body._sending::after {
-  opacity: 1;
-  visibility: visible;
-}
 .form__button {
   font-family: 'Poppins';
   font-style: normal;
@@ -483,7 +451,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 20% 0 0;
   }
 }
-.form__input._error {
+.form__input.error {
   box-shadow: 0 0 15px red;
 }
 .form__ico {
@@ -633,9 +601,6 @@ body.lock {
   }
 }
 
-.content__info .form__body {
-  display: flex;
-}
 .content__title {
   font-family: 'Varela';
   font-style: normal;

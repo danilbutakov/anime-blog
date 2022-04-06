@@ -139,6 +139,9 @@ $(document).ready(function() {
             }
           ]
     });
+<<<<<<< HEAD
     
+=======
+>>>>>>> php
 });
 

@@ -34,7 +34,10 @@ echo "ERROR: Не удалось выполнить $query. " . mysqli_error($my
 $mysqli->close();
 
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,12 +48,6 @@ $mysqli->close();
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/sign-up.css">
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous">
-    </script>
-    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -78,6 +75,7 @@ $mysqli->close();
             <section class="sign">
                 <div class="sign__content _container-signlog">
                     <div class="content__form2">
+<<<<<<< HEAD
                         <form id="form2" method="post" action="signup.php">
                             <div class="form2__item">
                                 <label for="" class="form__label">Name</label>
@@ -90,6 +88,20 @@ $mysqli->close();
                             <div class="form2__item">
                                 <label for="" class="form__label password">Password</label>
                                 <input type="password" name="password" class="password" placeholder="Enter your Password" />
+=======
+                        <form action="" method="post" class="js-form" novalidate>
+                            <div class="form2__item">
+                                <label for="" class="form__label">Name</label>
+                                <input type="text" name="name" class="form__input js-input" placeholder="Enter your Name"/>
+                            </div>
+                            <div class="form2__item">
+                                <label for="" class="form__label">Email</label>
+                                <input type="email" name="email" class="form__input js-input js-input-email" placeholder="Enter your Email" />
+                            </div>
+                            <div class="form2__item">
+                                <label for="" class="form__label password">Password</label>
+                                <input type="password" name="password" class="form__input js-input js-input-password" placeholder="Enter your Password" />
+>>>>>>> php
                             </div>
                             <div class="form2__button">
                                 <button type="submit" name="submit" class="button__send">Sign up</button>
@@ -101,4 +113,5 @@ $mysqli->close();
         </main>
     </div>
 </body>
+<script src="js/form.js"></script>
 </html>

@@ -84,7 +84,7 @@ $mysqli->close();
                         <div class="content__form form">
                             <form action="" method="post" class="js-form" novalidate>
                                 <button class="form__button" type="submit" name="submit">SUBSCRIBE</button>
-                                <input type="email" name="email" class="form__input js-input js-input-email" placeholder="Enter your email">
+                                <input type="email" name="email__sub" class="form__input js-input js-input-email" placeholder="Enter your email">
                                 <button class="form__ico" type="submit" name="submit"><img src="img/ico/Group 4.png" alt=""></button> 
                             </form>
                         </div>
@@ -665,7 +665,7 @@ $mysqli->close();
                     <div class="footer__form form">
                         <form action="" method="post" class="js-form" novalidate>
                             <button class="form__button" type="submit">SUBSCRIBE</button>
-                            <input type="email" name="email" class="form__input js-input js-input-email" placeholder="Enter your email">
+                            <input type="email" name="email__sub" class="form__input js-input js-input-email" placeholder="Enter your email">
                             <button class="form__ico" type="submit"><img src="img/ico/Group 4.png" alt=""></button> 
                         </form>
                     </div>

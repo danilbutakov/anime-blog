@@ -1,3 +1,37 @@
+<?php
+
+$mysqli = new mysqli('localhost', 'dan', '', 'anime-blog');
+
+    if(mysqli_connect_errno()) {
+        printf('Соединение не установлено', mysqli_error());
+        exit();
+    }
+
+
+$mysqli->set_charset('utf8');
+
+
+
+$query = $mysqli->query('SELECT * FROM subscribe');
+
+$emailSub = mysqli_real_escape_string($mysqli, $_REQUEST['email__sub']);
+
+if($query != '') {
+    $query = "INSERT INTO subscribe VALUES(null, '$emailSub')";
+}
+
+
+
+if(mysqli_query($mysqli, $query)){
+    echo "Записи успешно добавлены.";
+} else{
+    echo "ERROR: Не удалось выполнить $query. " . mysqli_error($mysqli);
+}
+
+
+$mysqli->close();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

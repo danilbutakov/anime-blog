@@ -32,10 +32,6 @@ if(mysqli_query($mysqli, $query)){
 $mysqli->close();
 
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> php
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -34,10 +34,6 @@ echo "ERROR: Не удалось выполнить $query. " . mysqli_error($my
 $mysqli->close();
 
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> php
 <!DOCTYPE html>
 <html lang="en">
 <head>

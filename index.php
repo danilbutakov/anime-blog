@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('localhost', 'dan', '', 'anime-blog');
+$mysqli = new mysqli('localhost', 'root', 'admin', 'anime-blog');
 
     if(mysqli_connect_errno()) {
         printf('Соединение не установлено', mysqli_error());
